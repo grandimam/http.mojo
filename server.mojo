@@ -24,6 +24,5 @@ struct HTTPServer:
         if not data:
             return
         else:
-            let request_text = data.decode("utf-8")
-            let response_text = response.to_bytes()
-            client_socket.sendall(response_text.encode("utf-8"))
+            let response = data.decode("utf-8")
+            client_socket.sendall(response.encode("utf-8"))

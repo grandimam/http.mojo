@@ -11,6 +11,3 @@ struct HTTPResponse:
         self.status_message = status_message
         self.headers = headers
         self.body = body
-    
-    fn to_bytes(inout self):
-        pass
